@@ -1,12 +1,11 @@
 import element from 'virtual-element'
 
-import { assign }     from 'app/utils'
-import {
-	getUser,
-	getRepository,
-	getRepositories,
-	getContributors } from 'app/utils/github'
-import * as Avatar    from 'app/components/avatar'
+import { assign }          from 'app/utils'
+import { getUser,
+         getRepository,
+         getRepositories,
+         getContributors } from 'app/utils/github'
+import * as Avatar         from 'app/components/avatar'
 
 
 export function initialState(props) {
