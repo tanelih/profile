@@ -1,0 +1,1 @@
+ln -nsf ../src/scripts node_modules/app

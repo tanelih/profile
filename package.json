@@ -1,0 +1,26 @@
+{
+  "name": "profile",
+  "version": "1.0.0",
+  "description": "My GitHub profile pages",
+  "scripts": {
+    "watch": "sh scripts/watch.sh",
+    "build": "sh scripts/build.sh",
+    "postinstall": "sh scripts/postinstall.sh"
+  },
+  "author": "https://github.com/tanelih",
+  "license": "MIT",
+  "dependencies": {
+    "deku": "0.5.4",
+    "babel": "5.8.23",
+    "whatwg-fetch": "0.9.0",
+    "virtual-element": "1.1.2"
+  },
+  "devDependencies": {
+    "babelify": "6.3.0",
+    "browserify": "11.0.1",
+    "budo": "4.2.1",
+    "envify": "^3.4.0",
+    "garnish": "3.0.0",
+    "watchify": "3.4.0"
+  }
+}

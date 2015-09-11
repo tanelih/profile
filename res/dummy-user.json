@@ -1,0 +1,19 @@
+{
+    "login": "tanelih",
+    "id": 3582272,
+    "avatar_url": "https://avatars.githubusercontent.com/u/3582272?v=3",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/tanelih",
+    "html_url": "https://github.com/tanelih",
+    "followers_url": "https://api.github.com/users/tanelih/followers",
+    "following_url": "https://api.github.com/users/tanelih/following{/other_user}",
+    "gists_url": "https://api.github.com/users/tanelih/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/tanelih/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/tanelih/subscriptions",
+    "organizations_url": "https://api.github.com/users/tanelih/orgs",
+    "repos_url": "https://api.github.com/users/tanelih/repos",
+    "events_url": "https://api.github.com/users/tanelih/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/tanelih/received_events",
+    "type": "User",
+    "site_admin": false
+}
