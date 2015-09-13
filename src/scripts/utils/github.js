@@ -10,46 +10,46 @@ const get = url => fetch(url).then(res => res.json())
  */
 
 const UserPropertyMap = {
-	'login':      'name',
-	'avatar_url': 'avatar'
+  'login':      'name',
+  'avatar_url': 'avatar'
 }
 
 const ContributorPropertyMap = {
-	'login':         'name',
-	'contributions': 'contributions'
+  'login':         'name',
+  'contributions': 'contributions'
 }
 
 let RepositoryPropertyMap = {
-	'name':        'name',
-	'fork':        'fork',
-	'description': 'description',
-	'language':    'language'
+  'name':        'name',
+  'fork':        'fork',
+  'description': 'description',
+  'language':    'language'
 }
 
-// we need to include the parent repository as well
-RepositoryPropertyMap = assign(
-	RepositoryPropertyMap, { 'owner': UserPropertyMap })
-RepositoryPropertyMap = assign(
-	RepositoryPropertyMap, { 'parent': RepositoryPropertyMap })
+// we need to reference other property maps in the repository property mapping
+RepositoryPropertyMap = assign(RepositoryPropertyMap, {
+  'owner': UserPropertyMap })
+RepositoryPropertyMap = assign(RepositoryPropertyMap, {
+  'parent': RepositoryPropertyMap })
 
 /**
  *
  */
 export function getUser(user) {
-	let url = process.env.NODE_ENV === 'development'
-		? `res/dummy-user.json`
-		: `https://api.github.com/users/${user}`
-	return get(url).then(mapProperties(UserPropertyMap))
+  let url = process.env.NODE_ENV === 'development'
+    ? `res/dummy-user.json`
+    : `https://api.github.com/users/${user}`
+  return get(url).then(mapProperties(UserPropertyMap))
 }
 
 /**
  *
  */
 export function getRepository(user, repo) {
-	let url = process.env.NODE_ENV === 'development'
-		? `res/dummy-repository.json`
-		: `https://api.github.com/repos/${user}/${repo}`
-	return get(url).then(mapProperties(RepositoryPropertyMap))
+  let url = process.env.NODE_ENV === 'development'
+    ? `res/dummy-repository.json`
+    : `https://api.github.com/repos/${user}/${repo}`
+  return get(url).then(mapProperties(RepositoryPropertyMap))
 
 }
 
@@ -57,20 +57,20 @@ export function getRepository(user, repo) {
  *
  */
 export function getRepositories(user) {
-	let url = process.env.NODE_ENV === 'development'
-		? `res/dummy-repositories.json`
-		: `https://api.github.com/users/${user}/repos`
-	return get(url).then(repositories =>
-		repositories.map(mapProperties(RepositoryPropertyMap)))
+  let url = process.env.NODE_ENV === 'development'
+    ? `res/dummy-repositories.json`
+    : `https://api.github.com/users/${user}/repos`
+  return get(url).then(repositories =>
+    repositories.map(mapProperties(RepositoryPropertyMap)))
 }
 
 /**
  *
  */
 export function getContributors(user, repo) {
-	let url = process.env.NODE_ENV === 'development'
-		? `res/dummy-contributors.json`
-		: `https://api.github.com/repos/${user}/${repo}/contributors`
-	return get(url).then(contributors =>
-		contributors.map(mapProperties(ContributorPropertyMap)))
+  let url = process.env.NODE_ENV === 'development'
+    ? `res/dummy-contributors.json`
+    : `https://api.github.com/repos/${user}/${repo}/contributors`
+  return get(url).then(contributors =>
+    contributors.map(mapProperties(ContributorPropertyMap)))
 }
