@@ -1,0 +1,97 @@
+
+html, body, #app {
+  margin:  0;
+  padding: 0;
+
+  width:  100%;
+  height: 100%;
+
+  font-family: Source Code Pro;
+}
+
+#user-view {
+  width:     800px;
+  max-width: 100vw;
+
+  margin: 0 auto;
+}
+
+#user-view .profile {
+  width: 100%;
+
+  display: flex;
+
+  align-items:     center;
+  justify-content: center;
+}
+
+#user-view .profile .avatar {
+  width:  128px;
+  height: 128px;
+
+  margin: 16px;
+
+  flex: 0 1 128px;
+
+  border-radius: 50%;
+}
+
+#user-view .profile .info {
+  flex: 0 1 256px;
+  margin: 16px;
+}
+
+#user-view .profile .info .user-name {
+  font-size: 12pt;
+}
+
+#user-view .profile .info .real-name {
+  font-size: 14pt;
+}
+
+#user-view .repository-list .list-container {
+  display: flex;
+  margin-top: 24px;
+}
+
+#user-view .repository-list .list {
+  flex: 1 0;
+}
+
+#user-view .repository-list .title {
+  flex: 1 0;
+
+  margin-top:   8px;
+  margin-right: 64px;
+
+  text-align: right;
+}
+
+/**
+ * Responsive 'profile'
+ */
+@media screen and (max-width: 600px) {
+  #user-view .profile {
+    flex-direction: column;
+  }
+  #user-view .profile .info {
+    flex: 0 1;
+  }
+}
+
+/**
+ * Responsive 'repository-list'
+ */
+@media screen and (max-width: 600px) {
+  #user-view .repository-list .list-container {
+    flex-direction: column;
+    align-items:    center;
+  }
+  #user-view .repository-list .title {
+    margin:     0px;
+    text-align: left;
+  }
+  #user-view .repository-list .list {
+    width: 300px;
+  }
+}

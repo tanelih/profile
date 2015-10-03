@@ -11,6 +11,7 @@ const get = url => fetch(url).then(res => res.json())
 
 const UserPropertyMap = {
   'login':      'name',
+  'name':       'realName',
   'avatar_url': 'avatar'
 }
 
