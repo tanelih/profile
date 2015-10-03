@@ -21,10 +21,12 @@ const ContributorPropertyMap = {
 }
 
 let RepositoryPropertyMap = {
-  'name':        'name',
-  'fork':        'fork',
-  'description': 'description',
-  'language':    'language'
+  'name':             'name',
+  'fork':             'fork',
+  'description':      'description',
+  'language':         'language',
+  'stargazers_count': 'stars',
+  'updated_at':       'lastUpdate'
 }
 
 // we need to reference other property maps in the repository property mapping

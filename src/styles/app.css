@@ -9,8 +9,13 @@ html, body, #app {
   font-family: Source Code Pro;
 }
 
+ul, li {
+  padding:    0px;
+  list-style: none;
+}
+
 #user-view {
-  width:     800px;
+  width:     1024px;
   max-width: 100vw;
 
   margin: 0 auto;
@@ -23,6 +28,9 @@ html, body, #app {
 
   align-items:     center;
   justify-content: center;
+
+  margin-top:    64px;
+  margin-bottom: 128px;
 }
 
 #user-view .profile .avatar {
@@ -56,16 +64,52 @@ html, body, #app {
 
 #user-view .repository-list .list {
   flex: 1 0;
+
+  margin-right: 128px;
 }
 
 #user-view .repository-list .title {
   flex: 1 0;
 
   margin-top:   8px;
-  margin-right: 64px;
+  margin-right: 40px;
 
   text-align: right;
 }
+
+#user-view .repository {
+  margin-bottom: 48px;
+}
+
+#user-view .repository-title {
+  display:     flex;
+  align-items: center;
+
+  margin-bottom: 8px;
+}
+
+#user-view .repository-title .link {
+  flex: 1 0 256px;
+  text-align: left;
+}
+
+#user-view .repository-title .language {
+  flex: 1 1 128px;
+
+  font-size:  10pt;
+  text-align: right;
+}
+
+#user-view .repository .description {
+  font-size: 10pt;
+}
+
+#user-view .repository .info {
+  font-size:  8pt;
+  text-align: right;
+  margin-top: 8px;
+}
+
 
 /**
  * Responsive 'profile'
@@ -88,10 +132,12 @@ html, body, #app {
     align-items:    center;
   }
   #user-view .repository-list .title {
+    width:      300px;
     margin:     0px;
     text-align: left;
   }
   #user-view .repository-list .list {
-    width: 300px;
+    width:        300px;
+    margin-right: 0px;
   }
 }
